@@ -199,7 +199,6 @@ int TransferListSortModel::compare(const QModelIndex &left, const QModelIndex &r
     case TransferListModel::TR_POPULARITY:
         return customCompare(leftValue.toReal(), rightValue.toReal());
 
-    case TransferListModel::TR_PRIVATE:
     case TransferListModel::TR_STATUS:
         return threeWayCompare(leftValue.toInt(), rightValue.toInt());
 
@@ -208,6 +207,7 @@ int TransferListSortModel::compare(const QModelIndex &left, const QModelIndex &r
     case TransferListModel::TR_SEEN_COMPLETE_DATE:
         return customCompare(leftValue.toDateTime(), rightValue.toDateTime());
 
+    case TransferListModel::TR_PRIVATE:
     case TransferListModel::TR_DLLIMIT:
     case TransferListModel::TR_DLSPEED:
     case TransferListModel::TR_QUEUE_POSITION:
